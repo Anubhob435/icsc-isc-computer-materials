@@ -1,0 +1,35 @@
+### Short Note: Addition and Subtraction using 1’s and 2’s Complement
+
+---
+
+✅ 1’s Complement
+
+- 1’s Complement: Invert all bits (0 → 1, 1 → 0)
+  - Example: Binary of +5 = 0101 → 1’s complement = 1010 (represents -5)
+
+Subtraction using 1’s Complement:
+1. Take 1’s complement of the number to subtract (i.e., negative number).
+2. Add it to the other number.
+3. If carry occurs, add it to the result (end-around carry).
+4. If no carry, result is negative → take 1’s complement again.
+
+---
+
+✅ 2’s Complement
+
+- 2’s Complement: Invert all bits + add 1
+  - Example: Binary of +5 = 0101 → Invert = 1010 → Add 1 = 1011 (represents -5)
+
+Subtraction using 2’s Complement:
+1. Take 2’s complement of the number to subtract.
+2. Add it to the other number.
+3. Ignore carry (if it occurs).
+4. Result is in proper binary form.
+
+---
+
+🧠 Key Tips
+- Use n bits (like 4-bit, 8-bit) for consistency
+- 2’s complement is easier for computers → no end-around carry
+- Always check sign bit (leftmost bit):
+  - 0 = positive, 1 = negative

@@ -1,0 +1,33 @@
+String st = " Name" ;
+String st2 = "Hello" ;
+String st4 = " no way home tonight ";
+String st3 = "namE";
+int[] x = {5, 10, 15};s
+
+	//st = st2
+	//st = "Hello"
+
+int x = st.length()  //returns length of string
+ch x = st.charAt(2) // ' '
+int x = st.indexOf('e') // 3
+st2.lastIndexOf('l')  // 3
+
+String x = st.substring(2) // "me"
+Sting x = st.substring(1, 3) // "ame" 
+
+st.toLowerCase() //"name"
+st2.toUpperCase() // "HELLO"
+
+st.replace('N', 'M') // "Mame"
+
+st2.concat(st) // Hello Name
+Boolean x = st.equals(srt2) // boolean
+Boolean x = st.equalsIgnoreCase(st3) //
+
+int x = st.compareTo(st3) // 0
+int x = st.compareToIgnoreCase(st3) //1
+
+Sting x = st4.trim() // "no white space"
+
+Boolean x = st.startsWith('n') //False
+Boolean x = st4.endsWith('t') // false

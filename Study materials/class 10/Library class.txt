@@ -1,0 +1,88 @@
+// Library class In java
+
+
+- primitive and non primitive data type
+	- class is a composite and non primitive data type
+	byte      - 1 byte
+	short     - 2 byte
+	int         - 4 byte
+	long      - 8 byte
+
+	float      - 4 byte 
+	double  - 8 byte
+
+	char       - 2 byte
+	boolean   - 1 byte
+
+Number Systems
+Binary - 2 [0 1]
+Decimal - 10 [0 1 2 3 4 5 6 7 8 9]
+Octal - 8 [ 0 1 2 3 4 5 6 7]
+HexDecimal - [0 1 2 3 4 5 6 7 8 9 A B C D E F]
+
+
+library class - contains similar type of packages java.lang...  java.math
+
+wrapper class - convert stings to primitive data type and vice versa , available in java wrapper class.
+
+	primitive  |  Wrapper Class
+       -----------------------------------------
+	int            | Integer
+	char         | Character
+	float         | Float
+	long         | Long
+
+
+		
+	- int x = int.parseint(sa) 
+	- int x = Int.valuOf(sa)
+
+	String sa = "135";
+        int y = Integer.valueOf(sa);
+        System.out.println(y + 55);
+
+	- parse can only take string and returns primitive datatype
+	- ValueOf can take anything and returns as object value
+
+	-         
+		double let = 66.0;
+       		String z = Double.toString(let);
+
+	- Autoboxing / boxing
+		- primitive value assigned to wrapper class
+			- Character obj = ch;
+			- int x = obj;
+
+Character Functions
+
+	A - Z | 65 - 90
+	a - z  | 97 - 122
+	0 - 9  | 48 - 57
+	' '      | 32 
+
+ch x = '5'
+int y = (int) x;
+        System.out.println("The ASCII value of '" + x + "' is: " + asciiValue);
+
+	- bollean b = Character.isLetter(x);
+	
+	char x = 'g';
+        boolean b = Character.isLetter(x);
+        System.out.println(b);
+	
+	- bollean b = Character.isDigit(x);
+
+	- bollean b = Character.isLetterOrDigit(x);
+	- bollean b = Character.isUpperCase(x);
+	- bollean b = Character.isLowerCase(x);
+
+	- char b = Character.toLowerCase(x);
+	- char b = Character.toLowerCase(x);
+
+	- bollean b = Character.isWhitespace(x); // ' ' or '\n'
+
+
+System.out.print("Enter a character: ");
+	char ch = scanner.nextLine.charAt(0);
+
+

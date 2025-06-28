@@ -1,0 +1,35 @@
+//User Defined Methods
+	- A method is a block of code that gets executed when called upon
+	- Features:
+		-- Code reusability
+		-- User defined methods
+		-- reduce complexity
+		-- reduce Length
+
+
+public static void main(String [] args)
+<specifiers> <Modifiers> <return_type> method_name (parameter 1, parameter2)
+	{
+		//code
+	}
+
+
+Can be of two types
+	- static Method
+	- Non static Method
+
+
+void display(int[]  arr){	
+	for (int i =0, i< x.length, i++)
+		{
+			System.out.println(arr [i]); 
+		}
+	}
+
+Two ways to call the method
+	- Call by reference
+		--The value given while calling the method is inserted in the Method.
+	- Call by value
+		-- 
+
+	 

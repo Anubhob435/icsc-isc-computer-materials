@@ -1,0 +1,94 @@
+07/10/23
+
+Iterative Constructs Java
+
+LOOP is defined as a repetative structure in which a statement(s) 
+are repeated untill the given condition is False
+
+Three Main type of loops in Java
+	for loop, 
+	while loop, 
+	do-while loop
+
+Two catagories
+
+	Entry controlled (condition is checked before entering body) - for, while
+	Exit controlled (body is checked before entering the loop) - do-while
+
+  
+	
+
+Fixed Iteration - for, while, do-while
+	Unfixed Iteration- while, do-while
+
+for (initilization; condition; update_expression)
+{
+	//loop body
+}
+
+
+while (condition)
+{
+	//loop body
+}
+
+do
+{
+	//loop body
+} while (condition);
+
+
+
+EXAMPLES: Print "Hello" 10 times on the screen.
+
+for (int i = 1; i<=10; i++)
+{
+	System.out.println("Hello");
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+int i = 1;
+while (i <=10)
+{
+	System.out.println("Hello");
+	i++;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+int i = 1;
+do
+{
+	System.out.println("Hello");
+	i++;
+}while (i <= 9)
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+SOLVE: Display all even numbers from 10 to 20.
+SOLVE: Enter 10 sumbers from user and show there sum.
+
+
+when i is incremented by 1 each time, it is called continious Loop.
+When i is incremented by more than 1 it is called Step loop.
+
+
+A break; statement is used to break a loop i.e, exit the loop.
+A continue; statement is used to break a loop in between and return to the start of the loop.
+
+
+SOLVE: What will be the output of the code? also convert the following code from for loop to while loop
+
+for(int i = 7; i <= 35; i = i + 7)
+{
+	System.out.println(i);
+}

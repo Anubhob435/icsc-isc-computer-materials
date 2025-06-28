@@ -1,0 +1,87 @@
+// Arrays [ ]
+
+Arrays - Collection of similar kinds of elements // similar data types.
+
+Arrays is composite Data type 
+
+int [] marks = {50, 60, 80, 120, 55}
+System.out.println(marks[5])
+
+// 80
+
+marks.length() will return the length of the array.  //5
+
+//How to input the values in the array?
+
+	i) directy create the array 
+		int [] n = {5, 10, 15};
+	
+	ii) declare the array then, using loop insert values according to usser input.
+		
+		Scanner sc = new Scanner(System.in);
+		int [] m = new int[size];
+
+		//System.out.println("Enter 5 values);
+
+		for (int i = 0; i < a.length; i++)
+			a[i] = sc.nextInt();
+
+// How to access the elements of the array?
+
+	i) directly say the element index you want
+		int [] marks = {50, 60, 80, 120, 55};
+		System.out.println(marks[2]);
+
+	ii)use a for loop to access one element after the other to print or use
+
+
+// Q1 Write some java code to get 10 students marks and find the average.
+// Q2 Write some java code to get 10 marks and find the largest number.
+
+
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter 10 numbers ");
+        int [] m = new int[4];
+        for (int i =0; i < m.length; i++)
+        {
+		    m[i] = sc.nextInt();
+        }
+        System.out.println(m[2]);
+    }
+}
+
+
+
+
+
+int[] array = {1 ,5 , 8, 20, 55, 31}
+
+int index = linear_search(array, 55); 
+
+if (index != -1){
+	System.out.println("Element found at index " + index);
+}
+else{
+	System.out.println("Element not found  " );
+
+}
+public static int linear_search(int[] array, int value){
+
+for(int i = 0; i< array.length; i++){
+	if(array[i] == value){
+		return i;
+		}
+	else {
+		return -1;
+		}
+	}
+}
+
+
+
+

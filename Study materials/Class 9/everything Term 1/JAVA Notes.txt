@@ -1,0 +1,281 @@
+29/06/23
+
+Object Oriented Programming
+
+Program - A set of instruction given to the computer to perform a particular task.
+
+Instructions - Set of Data
+
+Data - Any piece of information, a collection of information
+
+Programming language - A programming language is a formal language that allows programmers to write instructions or code to create computer programs. 
+It is a set of rules and syntax that provides a way to communicate with a computer system and instruct it to perform specific tasks or operations. 
+
+Object: An object is an instance of a class. It represents a particular entity or concept in the program. Objects have properties (data or attributes) and behaviors (methods or functions). 
+For example, if we have a class called "Car," an object of that class could be a specific car instance with its own unique characteristics and actions.
+
+Class: A class is a blueprint or template that defines the properties and behaviors that objects of that class will have. It serves as a blueprint for creating multiple objects with similar characteristics. A class defines the attributes (data members) and methods (member functions) that objects will possess.
+For example, a class called "Car" can define attributes like "color," "make," and "model," as well as methods like "start," "accelerate," and "stop."
+
+State: The state of an object refers to the current values of its attributes. It represents the data associated with the object at a specific point in time.
+For example, a car object's state could include its color, make, and current speed.
+
+Behavior: The behavior of an object refers to the actions or operations that the object can perform. It is determined by the methods or member functions defined within the class. 
+For example, a car object's behavior could include methods like "startEngine()" or "accelerate(speed)."
+
+Message Passing: Data passing between two objects
+
+
+
+Object-oriented programming (OOP) - is a programming paradigm(a pattern or model) that organizes software design around objects, which are instances of classes. 
+It is based on the concept of encapsulating data (attributes) and behaviors (methods) together into objects.
+
+4 pillars of object oriented programming:
+
+a) Abstraction: Abstraction involves representing complex systems by simplifying or abstracting their essential features, 
+focusing on what is necessary for the current context. 
+
+b)Encapsulation: Encapsulation is the process of bundling data (attributes) and related behaviors (methods) into objects. It enables data hiding, as the internal state of an object is not directly accessible from outside.
+
+c)Inheritance: Inheritance allows the creation of new classes (derived or child classes) that inherit properties and behaviors from existing classes (base or parent classes)
+
+d)Polymorphism: Polymorphism means the ability to take different forms. In OOP, polymorphism allows objects of different classes to be treated as objects of a common base class.
+
+
+MAIN THINGS INTRO
+
+basics of programming {} , () ,  " " , '' , ; , //
+Compiler, IDE, 
+Data Types (primitive) : byte , short , int , long , float , double , char , boolean 
+Data types( non primitive): strings, arrays
+operations: + , - , * , / , % , ++ , -- , = , == 
+Java characters , Java Tokens
+
+system.out.print(" \n") , println 
+
+public class [practice] {
+    public static void main(String[] args) {
+	}
+}
+
+
+
+
+1/7/2023
+
+m++ and ++m
+n-- and --n
+
+MATHEMATICAL LIBRARY METHODS
+
+> Pre defined functions
+> In java.lang package 
+> 13 Methods/functions
+> to use, simply say maths.function(value); 
+
+abs() - absolute value i.e, removes - sign. real life |x| , |a|, |b| etc.
+
+sqrt() - square root of a positive number.  
+cbrt() - cube root of a positive number.
+pow() - power of a^b.
+round() - round of to the nearest integer.
+rint() - round of to the nearest integer with .0 at end
+
+floor() - nearest integer but less than the given number.
+ceil() - nearest integer but greater than given number.
+
+max() - largest value b/w two numerical value.
+min() - smallest value b/w two numerical value.
+
+random() - random value b/w 0.0 and 1.0.
+
+Q. Write a program to print 'm' raised to the power 'n'. Also find the square root of m. the values of m and n are 25 and 3 respectively.
+
+
+
+4/7/2023
+
+> , < , = , >= greater than equals , <= , == , != , += , *=
+
+&& , || , !
+
+Normal flow
+conditional flow
+
+if(condition )
+	System.out.println(" ");
+
+else if (condition ) {
+	System.out.println();
+}
+
+else
+	System.out.println();
+
+###
+switch (control variable)
+case constrant 1:
+	statements;
+	break;
+case constrant 2:
+	statements;
+	break;
+case constrant 3:
+	statements;
+	break;
+default
+	statements;
+	[break not needed, automatically terminate,]
+
+
+8/7/2023
+
+//Input statements //
+
+import java.util.Scanner;
+.
+.
+Scanner sc = new Scanner(System.in);
+.
+.
+
+// for integers
+int abc = sc.nextInt();
+
+//for strings
+string abc = scanner.nextLine();
+
+//When using .nextLine() after .nextint()
+USE scanner.nextLine();
+
+
+
+11/07/23
+
+Math Concepts-
+Number Line, 
+Addition, Subtraction, Multiplication, Division(very very imp)
+Natural Numbers, Integers , Whole Numbers, Decimal Numbers/Fractional Numbers, Real Numbers.
+LCM, HCF, 
+
+> difference between System.out.println("x") and System.out.println(x)
+> Difference b/w OR( || ) and AND(&&)
+> Comparison operators
+> Strings
+
+
+
+15/07/23
+
+Class not taken due to fest
+
+
+22/07/23
+
+OBject Oriented Programming 
+Abstraction, encapsulation, polymorphism, inhereritance 
+
+import java.util.Scanner;
+.
+.
+Scanner scanner = new Scanner(System.in);
+
+Scanner class with Questions
+
+
+
+25/07/23
+
+Scanner class question solved
+
+
+29/08/23
+
+Class not taken
+
+
+
+1/08/23
+> Complete the rest of the basic questions
+> Start the If else quiestions
+
+
+
+5/08/23
+
+Errors!
+Unexpected Situation during run time of a program.
+
+Types:
+1. Syntax error - writing code error
+2. Run-time error - unexpected/impossible error such a 4/0
+3. Logical error - Human error in program reflects in final in answer 
+
+
+
+import java.util.Scanner;
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
+
+        System.out.println("enter the marks of math");
+        double math = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("enter the marks of science");
+        double science = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("enter the marks of english");
+        double english = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("enter the marks of social science");
+        double ss = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("enter the marks of hindi");
+        double hindi = scanner.nextDouble();
+        scanner.nextLine();
+
+        double result=math+hindi+english+science+ss ;
+        double total = 500;
+        double calculation= result/total*100;
+
+        System.out.println("your total is " + result);
+        System.out.println("you got " + Math.ceil(calculation) + "%") ;
+
+        if(calculation>=91 && calculation <=100){
+            System.out.println("grade is A");
+        }
+        else if(calculation>=81 && calculation <=90){
+            System.out.println("grade is B");
+        }
+        else if(calculation>=71 && calculation <=80){
+       System.out.println("grade is C");
+        }
+        else  if(calculation>=61 && calculation <=70){
+            System.out.println("grade is D");
+        }
+        else {
+            System.out.println("fail");
+        }
+    }
+}
+
+
+*******************************************************************************
+
+
+
+Tokens are the smallest building blocks of any code
+
+Keywords: public, class, static, void, int.
+Identifiers: Example, main, String, args, num1, num2, result.
+Literals: 5, 10, "The result is: ".
+Operators: =, +.
+Punctuation: {, }, (, ), ;, ,.
+Comments: // This is a single-line comment
+
+
+

@@ -1,0 +1,33 @@
+
+1's Complement:
+---------------
+Definition: The 1's complement of a binary number is formed by inverting all the bits (i.e., replacing all 1s with 0s and all 0s with 1s).
+Example: 
+Binary: 1010 → 1's complement: 0101
+
+2's Complement:
+---------------
+Definition: The 2's complement is obtained by taking the 1's complement of a binary number and then adding 1 to the least significant bit (LSB).
+Example:
+Binary: 1010
+1's complement: 0101
+2's complement: 0101 + 1 = 0110
+
+
+
+Subtraction using 1's Complement:
+---------------------------------
+To subtract B from A (i.e., A - B):
+1. Take the 1's complement of B.
+2. Add it to A.
+3. If there is a carry, add it to the result (end-around carry).
+4. If no carry, take the 1's complement of the result and add a minus sign.
+
+
+Subtraction using 2's Complement:
+---------------------------------
+To subtract B from A (i.e., A - B):
+1. Take the 2's complement of B.
+2. Add it to A.
+3. Ignore any carry beyond the most significant bit.
+4. The result is in 2's complement form (if the MSB is 1, it’s negative).

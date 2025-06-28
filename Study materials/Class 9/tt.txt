@@ -1,0 +1,46 @@
+1. What will be the data type of the expression 'a' + 5?
+
+2. What will be stored in the double variable d after this assignment: d = 10 / 3;
+
+3. What is the output of 5 % 3?
+
+4. What is the output of -3 * 2 + 1?
+
+
+5. What will be printed if the user enters 7 in the following code:
+
+int x = 5;
+if (x < 6) {
+  System.out.println("Small");
+} else {
+  System.out.println("Large");
+}
+
+
+6. What will be printed if the user enters 9 in the following code:
+
+if (a > b) {
+  System.out.println("a is bigger");
+} else
+ 
+if (a == b) {
+  System.out.println("a and b are equal");
+} else {
+  System.out.println("b is bigger");
+}
+
+
+7. How many times will the following loop execute: 
+
+for (int i = 10; i > 0; i--) 
+	{
+	System.out.print(0);
+	}
+
+
+8. What will be the final value of n after this loop finishes: 
+
+for (int n = 5; n < 15; n += 2) 
+	{ 
+	System.out.print(1);	
+	}

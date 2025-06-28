@@ -1,0 +1,69 @@
+            
+
+
+.  1                    Number Conversions (Binary, Octal, Decimal, Hexadecimal)
+
+---
+
+✅ Basics of Number Systems
+
+| Base | Name         | Digits Used        |
+|------|--------------|--------------------|
+| 2    | Binary       | 0, 1               |
+| 8    | Octal        | 0–7                |
+| 10   | Decimal      | 0–9                |
+| 16   | Hexadecimal  | 0–9, A–F (A=10...) |
+
+---
+
+🔁 Conversion Tips & Tricks
+
+---
+
+🔸 Decimal ↔ Binary
+- To Binary:
+  - Divide decimal number by 2, record remainders → reverse them.
+  - Example: 13 → 1101
+- To Decimal:
+  - Multiply each binary digit by 2^position, sum all.
+  - Example: 1101 → 1×2³ + 1×2² + 0×2¹ + 1×2⁰ = 13
+
+---
+
+🔸 Decimal ↔ Octal
+- To Octal:
+  - Divide decimal number by 8, record remainders → reverse them.
+- To Decimal:
+  - Multiply each digit by 8^position, then sum.
+
+---
+
+🔸 Decimal ↔ Hexadecimal
+- To Hex:
+  - Divide by 16, record remainders (use A-F for 10–15) → reverse
+- To Decimal:
+  - Multiply each digit by 16^position, sumbgvjh hgcgghvtrdtfg ygvggfcfg
+
+---
+
+🔸 Binary ↔ Octal
+- Group binary digits in 3s from right
+  - Add leading zeros if needed
+  - Convert each group to octal digit
+  - Example: 101011 → 000 101 011 → 2 3 → 53
+
+---
+
+🔸 Binary ↔ Hexadecimal
+- Group binary digits in 4s from right
+  - Convert each group to hex digit
+  - Example: 11010110 → 1101 0110 → D6
+
+---
+
+🧠 Quick Tricks
+- Binary ↔ Octal: 1 octal digit = 3 binary digits
+- Binary ↔ Hex: 1 hex digit = 4 binary digits
+- Always pad binary to group properly (3s or 4s) b n v bncfsw4ygvghb 
+- Use lookup tables for fast conversion
+  - e.g. binary 1010 = A in hex

@@ -1,0 +1,49 @@
+Paper 1: Theory [3 hrs 70 marks]
+
+	PART A (20 MARKS) [All Theory]
+	|
+	|-> 5 1 mark questions
+	|
+	|-> 5 2 mark questions
+	|
+	|-> 1 5 mark Question
+
+	PART B (50 Marks) (2 question from each section) [28 marks Programming ]
+	|
+	|->Section A [3 x 10] [Theory, Theory, Theory]
+	|
+	|->Section B [3 x 10] [prog, prog, theory]
+	|
+	|->Section C [3 x 5] [prog, prog, Theory]
+	
+
+
+[THEORY]
+- Number Systems
+- ENCODINGS
+	- Binary Encodings 
+	- Characters Encoding
+- LOGICS
+	- Propositional (truth tables)
+	- Logic gates [AND, OR, NOT, NAND, NOR, XOR]	
+	- hALF aDDER, fULL aDDER
+
+[PROGRAMMING]
+- Previous All
+- selection sorting, Insertion Sorting 
+- Recursion
+- File Handling
+- THEORY
+	- Algorithims
+	- Packages
+
+##########################################################################################
+
+Paper 2: Practical  [3 hrs 30 Marks]
+- Planning Session [90 min]
+	- pen and paper
+- Examination Session [90 min]
+	- BlueJ
+
+
+

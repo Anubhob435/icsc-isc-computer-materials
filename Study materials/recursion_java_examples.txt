@@ -1,0 +1,121 @@
+RECURSION 
+
+Description of Recursion:
+	- Recursion is a fundamental concept in programming where a function calls itself to solve a problem. 
+	- It works by breaking down a complex problem into smaller, more manageable sub-problems. 
+	- The function continues to call itself with smaller inputs until it reaches a base case — a condition 
+	  under which it stops calling itself and starts returning values.
+
+Why use recursion?
+	- Simplifies code for problems that can be divided into similar sub-problems (like factorial, tree traversal, etc.)
+	- Helpful in solving problems involving hierarchical or nested data structures
+
+Real-World Example:
+Imagine you're holding a mirror in front of another mirror. The reflection appears to go on infinitely — each smaller version looking 
+similar to the previous one. In recursion, each function call is like that mirror image — a smaller version of the same problem.
+
+Simple Programs
+	- Print Your name 10 times
+	- Print 1 to 10 using Recursion
+	- find Sum of 1 to N   
+	- Sum of Digits of a Number
+
+
+
+RECURSION - SIMPLE PROGRAMS IN JAVA
+
+1. Print Your Name 10 Times Using Recursion
+
+    public static void printName(int count) {
+        if (count == 0) 
+		return;
+        System.out.println("Your Name");
+        printName(count - 1);
+    }
+
+2. Print Numbers from 1 to 10 Using Recursion
+
+    public static void printNumbers(int current, int end) {
+        if (current > end) return;
+        System.out.println(current);
+        printNumbers(current + 1, end);
+    }
+
+
+3. Find Sum from 1 to N Using Recursion
+
+    public static int sumToN(int n) {
+        if (n == 0) return 0;
+        return n + sumToN(n - 1);
+    }
+
+
+4. Sum of Digits of a Number Using Recursion
+
+    public static int sumOfDigits(int num) {
+        if (num == 0) return 0;
+        return (num % 10) + sumOfDigits(num / 10);
+    }
+
+
+EXAMPLES
+
+1. Factorial Using Recursion in Java:
+
+public class RecursionExamples {
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(factorial(5)); // Output: 120
+    }
+}
+
+
+2. Power of a Number Using Recursion in Java:
+
+public class RecursionExamples {
+    public static int power(int base, int exp) {
+        if (exp == 0) {
+            return 1;
+        } else {
+            return base * power(base, exp - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(power(2, 3)); // Output: 8
+    }
+}
+
+
+
+// for later practice
+3. Armstrong Number Using Recursion in Java (isc 2019)
+
+public class RecursionExamples {
+    public static boolean isArmstrong(int num) {
+        int power = String.valueOf(num).length();
+        return num == helper(num, power);
+    }
+
+    public static int helper(int n, int power) {
+        if (n == 0) {
+            return 0;
+        }
+        int digit = n % 10;
+        return (int)Math.pow(digit, power) + helper(n / 10, power);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isArmstrong(153)); // Output: true
+    }
+}
+
+
+### https://sites.google.com/site/javaprogramsisc/home/isc-topic-wise-questions/recursion

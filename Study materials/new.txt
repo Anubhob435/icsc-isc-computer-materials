@@ -1,0 +1,51 @@
+The School Bus Students Tracking System is an intelligent, technology-enabled system 
+focusing on the safety, efficiency, and communication aspects of the school transportation 
+system. It will employ technologies including GPS, QR code attendance, notification, and 
+route planning to make it easier for the parents, drivers, and school officers to coordinate 
+efficiently. 
+1. Real-Time Bus Tracking: 
+• Mutual connection of the GPS to obtain the required data regarding the exact location 
+of the school bus in real time. 
+• An ETA alert is sent to the parents allowing the latter to track the shuttles and 
+decrease the time spent waiting for the shuttles. 
+2. QR Code-Based Attendance System: 
+• Regarding the identification code of each student, a small QR code integrated into 
+the ID card is assigned to a learner. 
+• The system comprises the use of a scanner that is placed on the bus and the student 
+scans their unique code as they get on or get out of the bus. Hence giving the system 
+real-time information. 
+3. Push Notifications: 
+• Whenever the bus is approaching any parent's stop or if the child has boarded or even 
+alighted from the bus, parents are alerted. 
+• Such notifications include route changes, delayed arrival of a passenger's preferred 
+bus, or an emergency. 
+4. Optimized Route for Drivers: 
+• Automated routing for school bus deployment making use of artificial intelligence 
+mapped against real-time traffic updates. 
+• Pick and drop locations of students' and parents' responses on attendance. 
+• Facilitates fuel consumption and reduces transport times 
+5. Centralized Management System: 
+• App in school authorities, where one can view the whereabouts of the bus, student 
+students, and the routes in general. 
+• This further creates an enabler for efficient decision-making & management of the 
+emergency response. 
+6. Enhanced Security Features: 
+• Encrypted data and a safe server make student and location info safe & secure. 
+• Basic biometric identification (for example with fingerprints, or a facial scan) – This 
+seems optional in the configuration, overlaying multiple layers of student 
+identification. 
+11 | P a g e  
+7. Cross-Platform Compatibility: 
+• Mobile application – this is an Android and iOS-based application to make the 
+application easily accessible by parents, drivers, and school administrators. 
+Advantages of the Proposed Solution: 
+• For Parents: Assists in the reduction of uncertainty and brings assurance that their 
+child is safe plus the location of the bus. 
+• For Drivers: It makes it easier to avoid making many unduly stops that may be 
+between two effective destinations. 
+• For School Management: Coordination and optimization of resource sharing and 
+current state monitoring of transportation management. 
+Integrating mobile applications and GPS navigation into the function of a user-friendly 
+design should provide contemporary improvement to the safety, performance, and 
+dependability of school transportation systems, as well as establish a new standard for 
+intelligent student tracking.

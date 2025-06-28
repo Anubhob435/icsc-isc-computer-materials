@@ -1,0 +1,49 @@
+Class , basis of all objects
+
+class - Blueprint
+object - Instance of class
+process of creating an object is called instantiation.
+
+How to create an object of a class?
+
+Classname obj = new Classname(); 
+Scanner scanner = new Scanner (System.in);
+
+ACCSESS SPECIFIER !!  [Decides How parts of The classes can be accessed by other classes in the program]
+
+
+Public - Accessible from anywhere in the program.
+Default - Accessible only within the same package.
+Private - Accessible only within the same class.
+Protected - Accessible within the same package and its subclasses.
+
+DATATYPES
+
+Primitive 
+
+Numeric Data Types:
+
+byte: Represents a single byte (8 bits) of signed integer data.
+short: Represents a 16-bit signed integer.
+int: Represents a 32-bit signed integer.
+long: Represents a 64-bit signed integer.
+float: Represents a 32-bit floating-point number.
+double: Represents a 64-bit floating-point number.
+Character Data Type:   
+
+char: Represents a single Unicode character (16 bits).
+Boolean Data Type:
+
+boolean: Represents a boolean value (true or false).
+
+
+Non Primitive/ Reference Datatype
+Arrays, String, Object, Classes
+
+
+CLASSES - a user defined DataType which contains data and associated Functions Wrapped together 
+	|
+[ 
+
+
+

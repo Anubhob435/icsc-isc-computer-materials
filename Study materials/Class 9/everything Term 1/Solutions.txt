@@ -1,0 +1,147 @@
+3.
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Temperature in Celsius: ");
+        double Celsius = scanner.nextDouble();
+        scanner.nextLine();
+        double Fahrenheit = (Celsius * (9.0/5.0) + 32.0);
+        System.out.println("The temperature in Fahrenheit " + Fahrenheit);
+
+    }
+}
+
+4.
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Your Name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Your age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Hello " + name + " Your age is " + age);
+    }
+}
+
+5.
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter height of Prism: ");
+        int height = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Enter lenght of Prism: ");
+        int lenght = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Enter width of Prism: ");
+        int width = scanner.nextInt();
+        scanner.nextLine();
+
+        int volume = lenght * width * height;
+
+        System.out.println("Volume of the rectangular Prism is: " + volume);
+    }
+}
+
+6.
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Value of a: ");
+        int a = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Value of b: ");
+        int b = scanner.nextInt();
+        scanner.nextLine();
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println("a= " + a + " b= " + b);
+    }
+}
+
+7.
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Year: ");
+        int year = scanner.nextInt();
+        scanner.nextLine();
+
+        if (year == 0 ){
+            System.out.println("Neither odd nor even");
+        }
+        else if (year % 2 == 0) {
+            System.out.println("Even ");
+        }
+        else {
+            System.out.println("Odd");
+        }
+    }
+}
+
+9.
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Base of Triange: ");
+        double base = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.println("Height of Triange: ");
+        double height = scanner.nextDouble();
+        scanner.nextLine();
+
+        double volume = 0.5 * base * height;
+
+        System.out.println("Volume is: " + volume);
+    }
+}
+
+10.
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Radius of cylinder: ");
+        double radius = scanner.nextDouble();
+        scanner.nextLine();
+        
+        System.out.println("Height of cylinder: ");
+        double height = scanner.nextDouble();
+        scanner.nextLine();
+
+        double volume = (22.0/7.0) * Math.pow(radius,2) * height;
+
+        System.out.println("Volume is: " + volume);
+    }
+}
+

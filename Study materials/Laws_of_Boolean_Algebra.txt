@@ -1,0 +1,55 @@
+
+Laws of Boolean Algebra
+-----------------------
+
+Boolean algebra is a mathematical system used to describe logical operations.
+It works with binary values: 0 (false) and 1 (true).
+
+Applications:
+-------------
+These laws are essential for simplifying Boolean expressions, designing
+efficient digital circuits, and minimizing logic gates in hardware systems.
+
+
+Laws and Identities:
+--------------------
+
+1. Identity Laws:
+   A + 0 = A
+   A · 1 = A
+
+2. Null Laws:
+   A + 1 = 1
+   A · 0 = 0
+
+3. Idempotent Laws:
+   A + A = A
+   A · A = A
+
+4. Domination Laws:
+   A + ¯A = 1
+   A · ¯A = 0
+
+5. Double Negation Law:
+   ¯(¯A) = A
+
+6. Commutative Laws:
+   A + B = B + A
+   A · B = B · A
+
+7. Associative Laws:
+   (A + B) + C = A + (B + C)
+   (A · B) · C = A · (B · C)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+8. Distributive Laws:
+   A · (B + C) = A · B + A · C
+   A + (B · C) = (A + B) · (A + C)
+
+9. Absorption Laws:
+   A + A · B = A
+   A · (A + B) = A
+
+10. De Morgan’s Laws:
+    ¯(A · B) = ¯A + ¯B
+    ¯(A + B) = ¯A · ¯B
