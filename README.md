@@ -122,10 +122,6 @@ If you'd like to contribute additional materials or improvements:
 3. Add clear documentation for new topics
 4. Test code examples before submission
 
-## 📞 Support
-
-For questions or clarifications about the materials, feel free to reach out or create an issue in the repository.
-
 ---
 
 ### 📌 Quick Access Links
