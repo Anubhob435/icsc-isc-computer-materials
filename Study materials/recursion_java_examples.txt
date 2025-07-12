@@ -24,7 +24,6 @@ Simple Programs
 
 RECURSION - SIMPLE PROGRAMS IN JAVA
 
-1. Print Your Name 10 Times Using Recursion
 
     public static void printName(int count) {
         if (count == 0) 
@@ -32,6 +31,7 @@ RECURSION - SIMPLE PROGRAMS IN JAVA
         System.out.println("Your Name");
         printName(count - 1);
     }
+
 
 2. Print Numbers from 1 to 10 Using Recursion
 
