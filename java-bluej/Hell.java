@@ -1,4 +1,4 @@
-public class Hell {
+public class Hell extends Practice {
 
     public static void printName(int count) {
         if (count == 0)

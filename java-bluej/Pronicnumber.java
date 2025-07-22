@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Pronicnumber {
+public class Pronicnumber extends Hell {
     void pronic(int n){
 
         boolean is_pronic = false;

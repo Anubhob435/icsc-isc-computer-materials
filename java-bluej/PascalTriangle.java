@@ -1,6 +1,6 @@
 import java.awt.desktop.SystemEventListener;
 
-public class PascalTriangle{
+public class PascalTriangle extends Hell{
     public static void main(String[] args){
         int N = 4;
         for (int i =1; i<= 4; i++) {

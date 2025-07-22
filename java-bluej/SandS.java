@@ -2,10 +2,7 @@ class Omega{
     
 }
 
-
-
-
-public class SandS
+public class SandS 
 {
     public static int linearSearch(int[] array, int target) {
         for (int i = 0; i < array.length; i++) {
@@ -72,7 +69,7 @@ public class SandS
     
 
     public static void main(String[] args) {
-        int[] array = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
+        /*int[] array = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
         int target = 23;
         int result = binarySearch(array, target);
         if (result == -1) {
@@ -89,6 +86,9 @@ public class SandS
         for (int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
         System.out.println();
-    }
+    }*/
+    Practice obj = new Practice();
+    obj.xyz();
+}
     
 }
