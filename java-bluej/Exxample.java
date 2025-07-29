@@ -15,7 +15,7 @@ public class Exxample {
             System.out.println(x);
             System.out.println(sum);
         number(x+1, sum);
-       return n + ()
+       return x ;
     }
 
     public static void main(String [] args){
