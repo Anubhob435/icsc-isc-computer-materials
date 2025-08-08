@@ -43,10 +43,10 @@ RECURSION - SIMPLE PROGRAMS IN JAVA
 
 
 3. Find Sum from 1 to N Using Recursion
-
-    public static int sumToN(int n) {
-        if (n == 0) return 0;
-        return n + sumToN(n - 1);
+	n = 1;
+    public static int number(int n) {
+        if (n == 10) return 0;
+        return n + number(n + 1);
     }
 
 
@@ -119,3 +119,5 @@ public class RecursionExamples {
 
 
 ### https://sites.google.com/site/javaprogramsisc/home/isc-topic-wise-questions/recursion
+
+func 1 + 20))
