@@ -47,7 +47,7 @@ Algorithm:
 Description: A number with an even number of 1s in its binary representation.
 
 Algorithm:
-1. Convert number to binary.
+1. Convert number to binary. String num = Integer.toBinaryString(num);
 2. Count 1s.
 3. Check if the count is even.
 --------------------------------------------------
