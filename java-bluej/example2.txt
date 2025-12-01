@@ -1,0 +1,87 @@
+31 
+Derive the necessary formulations to demonstrate the 
+working principle of an LSTM. 5 M3 CO3 Apply 
+32 Develop a hypothetical CNN for Image Classification. 5 M3 CO3 Apply 
+33 Develop a hypothetical CNN for Image Segmentation. 5 M3 CO3 Apply 
+34 
+Develop a hypothetical GAN for Digit Image Generation 
+given a class number 5 M3 CO3 Apply 
+35 
+Develop a hypothetical LSTM for News text 
+classification. 5 M3 CO3 Apply 
+36 
+ Define the generator and discriminator loss function of 
+a GAN 5 M3 CO3 Analyze 
+37 
+A GAN is used to generate samples similar to that of a 
+dataset. However, the generator never accesses the 
+dataset during the training process. Yet it can generate 
+pretty accurate samples. How can the generator learn 
+something that it never sees? 
+5 M3 CO3 Analyze 
+38 
+AlexNet has 8 layers of neurons whereas ResNet-152 
+has 152 layers of neurons. However, both of these 
+network has around 60 million Parameters. Justify the 
+following things. 
+ a) Why Resnet-152 has almost same number of 
+parameters even though it is considerably deeper than 
+5 M3 CO3 Analyze 
+ 
+University of Engineering & Management, Kolkata 
+University of Engineering & Management, Jaipur 
+Institute of Engineering & Management, Kolkata 
+ 
+ 
+Page 7 of 13    
+ 
+ 
+AlexNet. 
+ b) Why ResNet-152 performs much better than 
+AlexNet though they have almost same number of 
+parameters. 
+ c) Though ResNet-152 is considerably deeper yet 
+there are no vanishing gradient problems. 
+39 Explain the design choices that is necessary to be 
+considered during the design of a CNN. 5 M3 CO3 Analyze 
+40 Explain the principle of the generator and discriminator 
+loss function in a GAN. 5 M3 CO3 Analyze 
+41 List and explain the different types of activation 
+functions used in neural networks. 5 M1 CO1 Remember 
+42 Write down the steps of the backpropagation algorithm. 5 M1 CO1 Remember 
+43 Define vanishing and exploding gradients with 
+examples. 5 M2 CO2 Remember 
+44 Describe the key layers of a convolutional neural 
+network (CNN). 5 M3 CO3 Remember 
+45 List the major deep learning models (AlexNet, VGGNet, 
+ResNet) and mention their unique contributions. 5 M4 CO4 Remember 
+46 Explain why non-linear activation functions are 
+essential for multi-layer perceptrons. 5 M1 CO1 Understand 
+47 Explain how learning rate schedules affect 
+convergence during training. 5 M2 CO2 Understand 
+48 Explain the purpose of skip connections in U-Net 
+architecture. 5 M3 CO3 Understand 
+49 Discuss why GANs require both a generator and a 
+discriminator. 5 M3 CO3 Understand 
+50 Explain how reinforcement learning differs from 
+supervised learning. 5 M5 CO4 Understand 
+51 Construct a perceptron model for solving the AND logic 
+gate problem. 5 M1 CO1 Apply 
+52 Design a simple autoencoder for compressing 16
+dimensional input vectors into 4 dimensions. 5 M1 CO1 Apply 
+53 Apply dropout to an MLP with three hidden layers and 
+explain its effect. 5 M2 CO2 Apply 
+54 Develop a CNN model for classifying grayscale images 
+of handwritten characters (32×32). 5 M3 CO3 Apply 
+55 Implement a basic reinforcement learning framework 
+for a maze navigation problem. 5 M5 CO4 Apply 
+56 Analyze why multi-layer perceptrons fail on image 
+recognition tasks compared to CNNs. 5 M3 CO3 Analyze 
+57 Analyze the effect of using too high versus too low a 
+learning rate in training. 5 M2 CO2 Analyze 
+58 Compare the efficiency of AlexNet and VGGNet in 
+terms of parameter usage. 5 M4 CO4 Analyze 
+59 Analyze the role of explainable AI in critical decision 
+systems such as healthcare. 5 M5 CO4 Analyze 
+60 Analyze the challenges faced by RNNs when modeling 
+long-term dependencies. 5 M3 CO3 Analyze 
