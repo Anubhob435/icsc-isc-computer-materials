@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching & Sorting Algorithms - ISC CS Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[var(--bg-main)]">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-[var(--border-color)]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[var(--primary)]">ISC CS Guide</a>
+            <div class="flex gap-6">
+                <a href="#searching" class="nav-link">Searching</a>
+                <a href="#sorting" class="nav-link">Sorting</a>
+                <a href="#practice" class="nav-link">Practice</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-main)] mb-4">Searching & Sorting Algorithms</h1>
+            <p class="text-xl text-[var(--text-light)]">Master the fundamental algorithms for ISC exams.</p>
+        </div>
+
+        <!-- Searching Algorithms Section -->
+        <section id="searching" class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">🔍 Searching Algorithms</h2>
+            
+            <!-- Linear Search -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Linear Search</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Linear search checks each element in the array sequentially until the target is found or the end is reached.
+                        <strong>Time Complexity:</strong> O(n) | <strong>Space Complexity:</strong> O(1)
+                    </p>
+                    
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Java Implementation:</h4>
+                    <pre class="code-block mb-6">public int linearSearch(int[] arr, int target) {
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] == target) {
+            return i;  // Return index if found
+        }
+    }
+    return -1;  // Return -1 if not found
+}</pre>
+                    
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>When to use:</strong> Works on both sorted and unsorted arrays. Best for small datasets or when data is unsorted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Binary Search (Iterative) -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Binary Search (Iterative)</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Binary search repeatedly divides the sorted array in half, comparing the middle element with the target.
+                        <strong>Time Complexity:</strong> O(log n) | <strong>Space Complexity:</strong> O(1)
+                    </p>
+                    
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Java Implementation:</h4>
+                    <pre class="code-block mb-6">public int binarySearchIterative(int[] arr, int target) {
+    int left = 0;
+    int right = arr.length - 1;
+    
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        
+        if (arr[mid] == target) {
+            return mid;  // Found at index mid
+        } else if (arr[mid] < target) {
+            left = mid + 1;  // Search right half
+        } else {
+            right = mid - 1;  // Search left half
+        }
+    }
+    return -1;  // Not found
+}</pre>
+                    
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Prerequisite:</strong> Array must be sorted. Much faster than linear search for large datasets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Binary Search (Recursive) -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Binary Search (Recursive)</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Recursive implementation of binary search using the divide-and-conquer approach.
+                        <strong>Time Complexity:</strong> O(log n) | <strong>Space Complexity:</strong> O(log n) due to recursion stack
+                    </p>
+                    
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Java Implementation:</h4>
+                    <pre class="code-block mb-6">public int binarySearchRecursive(int[] arr, int target, int left, int right) {
+    // Base case: element not found
+    if (left > right) {
+        return -1;
+    }
+    
+    int mid = left + (right - left) / 2;
+    
+    // Base case: element found
+    if (arr[mid] == target) {
+        return mid;
+    }
+    
+    // Recursive cases
+    if (arr[mid] < target) {
+        return binarySearchRecursive(arr, target, mid + 1, right);
+    } else {
+        return binarySearchRecursive(arr, target, left, mid - 1);
+    }
+}
+
+// Helper method to call with initial parameters
+public int binarySearch(int[] arr, int target) {
+    return binarySearchRecursive(arr, target, 0, arr.length - 1);
+}</pre>
+                    
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Note:</strong> Recursive version is more elegant but uses extra memory for the call stack.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sorting Algorithms Section -->
+        <section id="sorting" class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">📊 Sorting Algorithms</h2>
+            
+            <!-- Bubble Sort -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Bubble Sort</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Bubble sort repeatedly steps through the array, compares adjacent elements, and swaps them if they're in the wrong order.
+                        <strong>Time Complexity:</strong> O(n²) | <strong>Space Complexity:</strong> O(1)
+                    </p>
+                    
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Java Implementation:</h4>
+                    <pre class="code-block mb-6">public void bubbleSort(int[] arr) {
+    int n = arr.length;
+    
+    for (int i = 0; i < n - 1; i++) {
+        boolean swapped = false;
+        
+        // Last i elements are already sorted
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap arr[j] and arr[j+1]
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
+        }
+        
+        // If no swaps occurred, array is sorted
+        if (!swapped) {
+            break;
+        }
+    }
+}</pre>
+                    
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Optimization:</strong> The boolean flag stops early if the array becomes sorted before all passes complete.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selection Sort -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Selection Sort</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Selection sort divides the array into sorted and unsorted regions. It repeatedly selects the minimum element from the unsorted region and moves it to the sorted region.
+                        <strong>Time Complexity:</strong> O(n²) | <strong>Space Complexity:</strong> O(1)
+                    </p>
+                    
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Java Implementation:</h4>
+                    <pre class="code-block mb-6">public void selectionSort(int[] arr) {
+    int n = arr.length;
+    
+    for (int i = 0; i < n - 1; i++) {
+        // Find minimum element in unsorted portion
+        int minIndex = i;
+        
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        
+        // Swap minimum element with first unsorted element
+        if (minIndex != i) {
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+}</pre>
+                    
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Advantage:</strong> Makes minimum number of swaps (at most n-1), useful when writing to memory is costly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insertion Sort -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Insertion Sort</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Insertion sort builds the sorted array one element at a time by inserting each element into its correct position.
+                        <strong>Time Complexity:</strong> O(n²) worst case, O(n) best case | <strong>Space Complexity:</strong> O(1)
+                    </p>
+                    
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Java Implementation:</h4>
+                    <pre class="code-block mb-6">public void insertionSort(int[] arr) {
+    int n = arr.length;
+    
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        
+        // Move elements greater than key one position ahead
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        
+        // Insert key at correct position
+        arr[j + 1] = key;
+    }
+}</pre>
+                    
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Best for:</strong> Small datasets or nearly sorted arrays. Very efficient when data is almost sorted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Practice Section -->
+        <section id="practice" class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">🎯 Practice Problems</h2>
+            
+            <div class="card">
+                <div class="p-8">
+                    <div id="practice-selector" class="grid md:grid-cols-2 gap-4 mb-8"></div>
+                    
+                    <div class="border-t border-[var(--border-color)] pt-8">
+                        <h3 id="practice-title" class="text-xl font-bold text-[var(--text-main)] mb-4"></h3>
+                        <p id="practice-statement" class="text-[var(--text-light)] mb-6"></p>
+                        
+                        <div id="practice-runner" class="space-y-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">📋 Algorithm Comparison</h2>
+            
+            <div class="card overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Algorithm</th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Best Case</th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Average Case</th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Worst Case</th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Space</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-[var(--border-color)]">
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Linear Search</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(1)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(1)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Binary Search</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(1)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(log n)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(log n)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(1)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Bubble Sort</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n²)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n²)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(1)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Selection Sort</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n²)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n²)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n²)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(1)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Insertion Sort</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n²)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(n²)</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">O(1)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 border-t border-[var(--border-color)] bg-white">
+        <p class="text-[var(--text-light)]">Built for ISC Class 11 Students.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

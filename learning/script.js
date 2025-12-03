@@ -415,4 +415,255 @@ private boolean check(String s, int start, int end) {
         });
     }
 
+    // ==========================================
+    // Algorithms Page Logic
+    // ==========================================
+    const practiceSelector = document.getElementById('practice-selector');
+    if (practiceSelector) {
+        const practices = {
+            linearSearch: {
+                title: "Test Linear Search",
+                statement: "Enter an array of numbers (comma-separated) and a target value to search for.",
+                runner: {
+                    inputs: [
+                        { id: 'arr', label: 'Array (comma-separated):', type: 'text', default: '5, 2, 8, 12, 1, 6' },
+                        { id: 'target', label: 'Target value:', type: 'number', default: 8 }
+                    ],
+                    logic: (inputs) => {
+                        const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
+                        const target = parseInt(inputs.target, 10);
+                        
+                        if (arr.some(isNaN)) return "Error: Invalid array values.";
+                        if (isNaN(target)) return "Error: Invalid target value.";
+                        
+                        function linearSearch(array, val) {
+                            for (let i = 0; i < array.length; i++) {
+                                if (array[i] === val) return i;
+                            }
+                            return -1;
+                        }
+                        
+                        const result = linearSearch(arr, target);
+                        return result === -1 
+                            ? `Target ${target} not found in array.`
+                            : `Target ${target} found at index ${result}.`;
+                    }
+                }
+            },
+            binarySearch: {
+                title: "Test Binary Search",
+                statement: "Enter a SORTED array of numbers and a target value. Binary search requires sorted input.",
+                runner: {
+                    inputs: [
+                        { id: 'arr', label: 'Sorted Array (comma-separated):', type: 'text', default: '1, 2, 5, 6, 8, 12' },
+                        { id: 'target', label: 'Target value:', type: 'number', default: 6 }
+                    ],
+                    logic: (inputs) => {
+                        const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
+                        const target = parseInt(inputs.target, 10);
+                        
+                        if (arr.some(isNaN)) return "Error: Invalid array values.";
+                        if (isNaN(target)) return "Error: Invalid target value.";
+                        
+                        function binarySearch(array, val) {
+                            let left = 0;
+                            let right = array.length - 1;
+                            
+                            while (left <= right) {
+                                const mid = Math.floor(left + (right - left) / 2);
+                                
+                                if (array[mid] === val) return mid;
+                                else if (array[mid] < val) left = mid + 1;
+                                else right = mid - 1;
+                            }
+                            return -1;
+                        }
+                        
+                        const result = binarySearch(arr, target);
+                        return result === -1 
+                            ? `Target ${target} not found in array.`
+                            : `Target ${target} found at index ${result}.`;
+                    }
+                }
+            },
+            bubbleSort: {
+                title: "Test Bubble Sort",
+                statement: "Enter an unsorted array of numbers to sort using bubble sort.",
+                runner: {
+                    inputs: [
+                        { id: 'arr', label: 'Array (comma-separated):', type: 'text', default: '64, 34, 25, 12, 22, 11, 90' }
+                    ],
+                    logic: (inputs) => {
+                        const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
+                        
+                        if (arr.some(isNaN)) return "Error: Invalid array values.";
+                        
+                        function bubbleSort(array) {
+                            const n = array.length;
+                            const sorted = [...array];
+                            
+                            for (let i = 0; i < n - 1; i++) {
+                                let swapped = false;
+                                for (let j = 0; j < n - i - 1; j++) {
+                                    if (sorted[j] > sorted[j + 1]) {
+                                        [sorted[j], sorted[j + 1]] = [sorted[j + 1], sorted[j]];
+                                        swapped = true;
+                                    }
+                                }
+                                if (!swapped) break;
+                            }
+                            return sorted;
+                        }
+                        
+                        const result = bubbleSort(arr);
+                        return `Original: [${arr.join(', ')}]\nSorted: [${result.join(', ')}]`;
+                    }
+                }
+            },
+            selectionSort: {
+                title: "Test Selection Sort",
+                statement: "Enter an unsorted array of numbers to sort using selection sort.",
+                runner: {
+                    inputs: [
+                        { id: 'arr', label: 'Array (comma-separated):', type: 'text', default: '64, 25, 12, 22, 11' }
+                    ],
+                    logic: (inputs) => {
+                        const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
+                        
+                        if (arr.some(isNaN)) return "Error: Invalid array values.";
+                        
+                        function selectionSort(array) {
+                            const n = array.length;
+                            const sorted = [...array];
+                            
+                            for (let i = 0; i < n - 1; i++) {
+                                let minIndex = i;
+                                for (let j = i + 1; j < n; j++) {
+                                    if (sorted[j] < sorted[minIndex]) {
+                                        minIndex = j;
+                                    }
+                                }
+                                if (minIndex !== i) {
+                                    [sorted[i], sorted[minIndex]] = [sorted[minIndex], sorted[i]];
+                                }
+                            }
+                            return sorted;
+                        }
+                        
+                        const result = selectionSort(arr);
+                        return `Original: [${arr.join(', ')}]\nSorted: [${result.join(', ')}]`;
+                    }
+                }
+            },
+            insertionSort: {
+                title: "Test Insertion Sort",
+                statement: "Enter an unsorted array of numbers to sort using insertion sort.",
+                runner: {
+                    inputs: [
+                        { id: 'arr', label: 'Array (comma-separated):', type: 'text', default: '12, 11, 13, 5, 6' }
+                    ],
+                    logic: (inputs) => {
+                        const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
+                        
+                        if (arr.some(isNaN)) return "Error: Invalid array values.";
+                        
+                        function insertionSort(array) {
+                            const n = array.length;
+                            const sorted = [...array];
+                            
+                            for (let i = 1; i < n; i++) {
+                                const key = sorted[i];
+                                let j = i - 1;
+                                
+                                while (j >= 0 && sorted[j] > key) {
+                                    sorted[j + 1] = sorted[j];
+                                    j--;
+                                }
+                                sorted[j + 1] = key;
+                            }
+                            return sorted;
+                        }
+                        
+                        const result = insertionSort(arr);
+                        return `Original: [${arr.join(', ')}]\nSorted: [${result.join(', ')}]`;
+                    }
+                }
+            }
+        };
+
+        const titleEl = document.getElementById('practice-title');
+        const statementEl = document.getElementById('practice-statement');
+        const runnerEl = document.getElementById('practice-runner');
+        let activeBtn = null;
+
+        function loadPractice(key) {
+            const data = practices[key];
+            if (!data) return;
+
+            titleEl.textContent = data.title;
+            statementEl.textContent = data.statement;
+
+            runnerEl.innerHTML = '';
+            const inputs = {};
+
+            data.runner.inputs.forEach(input => {
+                const label = document.createElement('label');
+                label.className = 'block text-sm font-medium text-[var(--text-light)] mb-1';
+                label.setAttribute('for', input.id);
+                label.textContent = input.label;
+
+                const inputEl = document.createElement('input');
+                inputEl.className = 'block w-full px-3 py-2 border border-[var(--border-color)] rounded-md shadow-sm focus:outline-none focus:ring-[var(--primary)] focus:border-[var(--primary)] sm:text-sm';
+                inputEl.type = input.type;
+                inputEl.id = input.id;
+                inputEl.value = input.default;
+
+                runnerEl.appendChild(label);
+                runnerEl.appendChild(inputEl);
+                inputs[input.id] = inputEl;
+            });
+
+            const runBtn = document.createElement('button');
+            runBtn.className = 'btn-secondary mt-4';
+            runBtn.textContent = 'Run';
+
+            const resultEl = document.createElement('div');
+            resultEl.className = 'mt-4 p-4 bg-gray-100 rounded-md text-[var(--text-main)] font-medium whitespace-pre-line';
+            resultEl.style.display = 'none';
+
+            runBtn.addEventListener('click', () => {
+                const inputValues = {};
+                for (const id in inputs) {
+                    inputValues[id] = inputs[id].value;
+                }
+                const result = data.runner.logic(inputValues);
+                resultEl.textContent = result;
+                resultEl.style.display = 'block';
+            });
+
+            runnerEl.appendChild(runBtn);
+            runnerEl.appendChild(resultEl);
+        }
+
+        Object.keys(practices).forEach((key, index) => {
+            const btn = document.createElement('button');
+            btn.className = 'btn-selector w-full text-left';
+            btn.textContent = practices[key].title;
+            btn.dataset.practiceKey = key;
+            btn.addEventListener('click', () => {
+                loadPractice(key);
+                if (activeBtn) {
+                    activeBtn.classList.remove('bg-[var(--primary)]', 'text-white');
+                }
+                btn.classList.add('bg-[var(--primary)]', 'text-white');
+                activeBtn = btn;
+            });
+            practiceSelector.appendChild(btn);
+
+            if (index === 0) {
+                btn.click();
+            }
+        });
+    }
+
 });
