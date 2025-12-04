@@ -432,19 +432,19 @@ private boolean check(String s, int start, int end) {
                     logic: (inputs) => {
                         const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
                         const target = parseInt(inputs.target, 10);
-                        
+
                         if (arr.some(isNaN)) return "Error: Invalid array values.";
                         if (isNaN(target)) return "Error: Invalid target value.";
-                        
+
                         function linearSearch(array, val) {
                             for (let i = 0; i < array.length; i++) {
                                 if (array[i] === val) return i;
                             }
                             return -1;
                         }
-                        
+
                         const result = linearSearch(arr, target);
-                        return result === -1 
+                        return result === -1
                             ? `Target ${target} not found in array.`
                             : `Target ${target} found at index ${result}.`;
                     }
@@ -461,26 +461,26 @@ private boolean check(String s, int start, int end) {
                     logic: (inputs) => {
                         const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
                         const target = parseInt(inputs.target, 10);
-                        
+
                         if (arr.some(isNaN)) return "Error: Invalid array values.";
                         if (isNaN(target)) return "Error: Invalid target value.";
-                        
+
                         function binarySearch(array, val) {
                             let left = 0;
                             let right = array.length - 1;
-                            
+
                             while (left <= right) {
                                 const mid = Math.floor(left + (right - left) / 2);
-                                
+
                                 if (array[mid] === val) return mid;
                                 else if (array[mid] < val) left = mid + 1;
                                 else right = mid - 1;
                             }
                             return -1;
                         }
-                        
+
                         const result = binarySearch(arr, target);
-                        return result === -1 
+                        return result === -1
                             ? `Target ${target} not found in array.`
                             : `Target ${target} found at index ${result}.`;
                     }
@@ -495,13 +495,13 @@ private boolean check(String s, int start, int end) {
                     ],
                     logic: (inputs) => {
                         const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
-                        
+
                         if (arr.some(isNaN)) return "Error: Invalid array values.";
-                        
+
                         function bubbleSort(array) {
                             const n = array.length;
                             const sorted = [...array];
-                            
+
                             for (let i = 0; i < n - 1; i++) {
                                 let swapped = false;
                                 for (let j = 0; j < n - i - 1; j++) {
@@ -514,7 +514,7 @@ private boolean check(String s, int start, int end) {
                             }
                             return sorted;
                         }
-                        
+
                         const result = bubbleSort(arr);
                         return `Original: [${arr.join(', ')}]\nSorted: [${result.join(', ')}]`;
                     }
@@ -529,13 +529,13 @@ private boolean check(String s, int start, int end) {
                     ],
                     logic: (inputs) => {
                         const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
-                        
+
                         if (arr.some(isNaN)) return "Error: Invalid array values.";
-                        
+
                         function selectionSort(array) {
                             const n = array.length;
                             const sorted = [...array];
-                            
+
                             for (let i = 0; i < n - 1; i++) {
                                 let minIndex = i;
                                 for (let j = i + 1; j < n; j++) {
@@ -549,7 +549,7 @@ private boolean check(String s, int start, int end) {
                             }
                             return sorted;
                         }
-                        
+
                         const result = selectionSort(arr);
                         return `Original: [${arr.join(', ')}]\nSorted: [${result.join(', ')}]`;
                     }
@@ -564,17 +564,17 @@ private boolean check(String s, int start, int end) {
                     ],
                     logic: (inputs) => {
                         const arr = inputs.arr.split(',').map(x => parseInt(x.trim(), 10));
-                        
+
                         if (arr.some(isNaN)) return "Error: Invalid array values.";
-                        
+
                         function insertionSort(array) {
                             const n = array.length;
                             const sorted = [...array];
-                            
+
                             for (let i = 1; i < n; i++) {
                                 const key = sorted[i];
                                 let j = i - 1;
-                                
+
                                 while (j >= 0 && sorted[j] > key) {
                                     sorted[j + 1] = sorted[j];
                                     j--;
@@ -583,7 +583,7 @@ private boolean check(String s, int start, int end) {
                             }
                             return sorted;
                         }
-                        
+
                         const result = insertionSort(arr);
                         return `Original: [${arr.join(', ')}]\nSorted: [${result.join(', ')}]`;
                     }
@@ -663,6 +663,62 @@ private boolean check(String s, int start, int end) {
             if (index === 0) {
                 btn.click();
             }
+        });
+    }
+
+    // ==========================================
+    // Objects & Classes Page Logic
+    // ==========================================
+    const objClassQaContainer = document.getElementById('qa-container');
+    if (objClassQaContainer && window.location.pathname.includes('objects_classes')) {
+        const theoryQuestions = [
+            {
+                q: "What is the difference between a class and an object?",
+                a: "A <strong>class</strong> is a blueprint or template that defines the structure and behavior of objects. An <strong>object</strong> is an actual instance of a class with specific values. Think of a class as a cookie cutter and an object as the actual cookie."
+            },
+            {
+                q: "What is a constructor and what are its characteristics?",
+                a: "A constructor is a special method that is automatically called when an object is created. Characteristics: (1) Same name as the class, (2) No return type (not even void), (3) Can be overloaded, (4) Used to initialize object attributes."
+            },
+            {
+                q: "What is encapsulation and why is it important?",
+                a: "Encapsulation is the practice of hiding internal data (making variables private) and providing controlled access through public methods (getters/setters). It's important because it: (1) Protects data from unauthorized access, (2) Allows validation before setting values, (3) Makes code more maintainable and flexible."
+            },
+            {
+                q: "What is the difference between instance variables and static variables?",
+                a: "<strong>Instance variables:</strong> Unique to each object, each object has its own copy.<br><strong>Static variables:</strong> Shared by all objects of the class, only one copy exists regardless of how many objects are created. Static variables belong to the class itself."
+            },
+            {
+                q: "When should you use the 'this' keyword?",
+                a: "Use 'this' when: (1) Parameter names are the same as instance variable names (this.name = name), (2) You want to call another constructor from within a constructor, (3) You need to pass the current object as a parameter, (4) You want to return the current object for method chaining."
+            },
+            {
+                q: "What is constructor overloading?",
+                a: "Constructor overloading means having multiple constructors in the same class with different parameter lists. This allows objects to be created in different ways. Example: A Book class might have constructors with (title, author, price), (title, author), or no parameters."
+            },
+            {
+                q: "Can a static method access instance variables? Why or why not?",
+                a: "No, a static method cannot directly access instance variables. This is because static methods belong to the class and can be called without creating an object, while instance variables belong to specific objects. Static methods can only access static variables and call other static methods directly."
+            },
+            {
+                q: "What are getter and setter methods?",
+                a: "<strong>Getter methods:</strong> Public methods that return the value of private variables (e.g., getName()).<br><strong>Setter methods:</strong> Public methods that set the value of private variables, often with validation (e.g., setAge(int age)). Together, they provide controlled access to private data, implementing encapsulation."
+            }
+        ];
+
+        theoryQuestions.forEach((item, index) => {
+            const qaId = `oc-qa-${index}`;
+            const qaBlock = document.createElement('div');
+            qaBlock.innerHTML = `
+                <button class="question-btn" data-answer-id="${qaId}">
+                    <span>${item.q}</span>
+                    <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="${qaId}" class="answer-panel hidden">
+                    <p class="text-[var(--text-light)]">${item.a}</p>
+                </div>
+            `;
+            objClassQaContainer.appendChild(qaBlock);
         });
     }
 

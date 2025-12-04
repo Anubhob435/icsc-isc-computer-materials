@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects & Classes - ISC CS Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[var(--bg-main)]">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-[var(--border-color)]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[var(--primary)]">ISC CS Guide</a>
+            <div class="flex gap-6">
+                <a href="#basics" class="nav-link">Basics</a>
+                <a href="#concepts" class="nav-link">Concepts</a>
+                <a href="#examples" class="nav-link">Examples</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[var(--text-main)] mb-4">Objects & Classes</h1>
+            <p class="text-xl text-[var(--text-light)]">Master Object-Oriented Programming fundamentals in Java.</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <section id="basics" class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">📚 What are Classes and Objects?</h2>
+
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Class</h3>
+                    <p class="text-[var(--text-light)] mb-4">
+                        A <strong>class</strong> is a blueprint or template for creating objects. It defines the
+                        properties (attributes)
+                        and behaviors (methods) that objects of that class will have.
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-6">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Think of it like:</strong> A class is like a cookie cutter - it defines the shape
+                            and structure,
+                            but it's not the cookie itself.
+                        </p>
+                    </div>
+
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Basic Class Structure:</h4>
+                    <pre class="code-block">public class Student {
+    // Instance variables (attributes/properties)
+    String name;
+    int rollNumber;
+    double marks;
+    
+    // Constructor
+    public Student(String n, int r, double m) {
+        name = n;
+        rollNumber = r;
+        marks = m;
+    }
+    
+    // Methods (behaviors)
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Marks: " + marks);
+    }
+    
+    public double getPercentage() {
+        return (marks / 500) * 100;
+    }
+}</pre>
+                </div>
+            </div>
+
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Object</h3>
+                    <p class="text-[var(--text-light)] mb-4">
+                        An <strong>object</strong> is an instance of a class. It's a concrete entity created from the
+                        class blueprint,
+                        with actual values for its attributes.
+                    </p>
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded mb-6">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Think of it like:</strong> An object is the actual cookie made from the cookie
+                            cutter -
+                            it has real substance and can be used.
+                        </p>
+                    </div>
+
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Creating and Using Objects:</h4>
+                    <pre class="code-block">public class Main {
+    public static void main(String[] args) {
+        // Creating objects (instantiation)
+        Student student1 = new Student("Alice", 101, 450);
+        Student student2 = new Student("Bob", 102, 380);
+        
+        // Using object methods
+        student1.displayInfo();
+        System.out.println("Percentage: " + student1.getPercentage() + "%");
+        
+        // Accessing object properties
+        System.out.println(student2.name);  // Outputs: Bob
+    }
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Concepts Section -->
+        <section id="concepts" class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">🔑 Key Concepts</h2>
+
+            <!-- Constructors -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Constructors</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        A constructor is a special method that is called when an object is created. It initializes the
+                        object's attributes.
+                    </p>
+
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Types of Constructors:</h4>
+                    <pre class="code-block mb-4">public class Book {
+    String title;
+    String author;
+    double price;
+    
+    // 1. Default Constructor (no parameters)
+    public Book() {
+        title = "Unknown";
+        author = "Unknown";
+        price = 0.0;
+    }
+    
+    // 2. Parameterized Constructor
+    public Book(String t, String a, double p) {
+        title = t;
+        author = a;
+        price = p;
+    }
+    
+    // 3. Constructor Overloading
+    public Book(String t, String a) {
+        title = t;
+        author = a;
+        price = 0.0;  // Default price
+    }
+}</pre>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Key Points:</strong> Constructor name must match class name. Constructors have no
+                            return type.
+                            Multiple constructors can exist (overloading).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Access Modifiers -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Access Modifiers</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Access modifiers control the visibility and accessibility of classes, methods, and variables.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="border border-[var(--border-color)] rounded-lg p-4">
+                            <h5 class="font-semibold text-[var(--text-main)] mb-2">public</h5>
+                            <p class="text-sm text-[var(--text-light)]">Accessible from anywhere</p>
+                        </div>
+                        <div class="border border-[var(--border-color)] rounded-lg p-4">
+                            <h5 class="font-semibold text-[var(--text-main)] mb-2">private</h5>
+                            <p class="text-sm text-[var(--text-light)]">Accessible only within the same class</p>
+                        </div>
+                        <div class="border border-[var(--border-color)] rounded-lg p-4">
+                            <h5 class="font-semibold text-[var(--text-main)] mb-2">protected</h5>
+                            <p class="text-sm text-[var(--text-light)]">Accessible within package and subclasses</p>
+                        </div>
+                        <div class="border border-[var(--border-color)] rounded-lg p-4">
+                            <h5 class="font-semibold text-[var(--text-main)] mb-2">default (no modifier)</h5>
+                            <p class="text-sm text-[var(--text-light)]">Accessible only within the same package</p>
+                        </div>
+                    </div>
+
+                    <h4 class="font-semibold text-[var(--text-main)] mb-3">Example with Encapsulation:</h4>
+                    <pre class="code-block">public class BankAccount {
+    // Private variables (encapsulation)
+    private String accountNumber;
+    private double balance;
+    
+    public BankAccount(String accNum, double initialBalance) {
+        accountNumber = accNum;
+        balance = initialBalance;
+    }
+    
+    // Public getter methods
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+    
+    public double getBalance() {
+        return balance;
+    }
+    
+    // Public setter with validation
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+    
+    public boolean withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+    }
+}</pre>
+                </div>
+            </div>
+
+            <!-- this Keyword -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">The 'this' Keyword</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        The <code class="bg-gray-200 px-2 py-1 rounded">this</code> keyword refers to the current object
+                        instance.
+                    </p>
+
+                    <pre class="code-block mb-4">public class Employee {
+    private String name;
+    private int id;
+    
+    // Using 'this' to distinguish between parameters and instance variables
+    public Employee(String name, int id) {
+        this.name = name;  // this.name refers to instance variable
+        this.id = id;      // name and id are parameters
+    }
+    
+    // Using 'this' to call another constructor
+    public Employee(String name) {
+        this(name, 0);  // Calls the parameterized constructor
+    }
+    
+    public void display() {
+        System.out.println("Name: " + this.name);
+        System.out.println("ID: " + this.id);
+    }
+    
+    // Using 'this' to return current object
+    public Employee updateName(String name) {
+        this.name = name;
+        return this;  // Method chaining
+    }
+}</pre>
+                </div>
+            </div>
+
+            <!-- Static Members -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Static Members</h3>
+                    <p class="text-[var(--text-light)] mb-6">
+                        Static members belong to the class itself, not to any specific object. They are shared across
+                        all instances.
+                    </p>
+
+                    <pre class="code-block mb-4">public class Counter {
+    // Static variable - shared by all objects
+    private static int count = 0;
+    
+    // Instance variable - unique to each object
+    private int instanceId;
+    
+    public Counter() {
+        count++;  // Increment shared counter
+        instanceId = count;
+    }
+    
+    // Static method - can be called without creating an object
+    public static int getCount() {
+        return count;
+        // Note: Cannot access instanceId here (non-static)
+    }
+    
+    public int getInstanceId() {
+        return instanceId;
+    }
+}
+
+// Usage:
+Counter c1 = new Counter();
+Counter c2 = new Counter();
+Counter c3 = new Counter();
+
+System.out.println(Counter.getCount());  // Outputs: 3 (called on class)
+System.out.println(c1.getInstanceId());  // Outputs: 1
+System.out.println(c2.getInstanceId());  // Outputs: 2</pre>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                        <p class="text-sm text-[var(--text-main)]">
+                            <strong>Remember:</strong> Static methods can only access static variables and call other
+                            static methods directly.
+                            They cannot use 'this' keyword.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="examples" class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">💡 Complete Examples</h2>
+
+            <!-- Example 1: Rectangle Class -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Example 1: Rectangle Class</h3>
+                    <p class="text-[var(--text-light)] mb-6">A simple class to represent a rectangle with methods to
+                        calculate area and perimeter.</p>
+
+                    <pre class="code-block">public class Rectangle {
+    // Instance variables
+    private double length;
+    private double width;
+    
+    // Constructor
+    public Rectangle(double l, double w) {
+        length = l;
+        width = w;
+    }
+    
+    // Method to calculate area
+    public double calculateArea() {
+        return length * width;
+    }
+    
+    // Method to calculate perimeter
+    public double calculatePerimeter() {
+        return 2 * (length + width);
+    }
+    
+    // Getter methods
+    public double getLength() {
+        return length;
+    }
+    
+    public double getWidth() {
+        return width;
+    }
+    
+    // Setter methods with validation
+    public void setLength(double l) {
+        if (l > 0) {
+            length = l;
+        }
+    }
+    
+    public void setWidth(double w) {
+        if (w > 0) {
+            width = w;
+        }
+    }
+}
+
+// Usage:
+Rectangle rect = new Rectangle(5.0, 3.0);
+System.out.println("Area: " + rect.calculateArea());        // 15.0
+System.out.println("Perimeter: " + rect.calculatePerimeter()); // 16.0</pre>
+                </div>
+            </div>
+
+            <!-- Example 2: Library System -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Example 2: Library Book System</h3>
+                    <p class="text-[var(--text-light)] mb-6">A more complex example with multiple concepts combined.</p>
+
+                    <pre class="code-block">public class LibraryBook {
+    // Static variable to track total books
+    private static int totalBooks = 0;
+    
+    // Instance variables
+    private String title;
+    private String author;
+    private String isbn;
+    private boolean isIssued;
+    
+    // Constructor
+    public LibraryBook(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.isIssued = false;
+        totalBooks++;
+    }
+    
+    // Method to issue book
+    public boolean issueBook() {
+        if (!isIssued) {
+            isIssued = true;
+            return true;
+        }
+        return false;
+    }
+    
+    // Method to return book
+    public void returnBook() {
+        isIssued = false;
+    }
+    
+    // Check availability
+    public boolean isAvailable() {
+        return !isIssued;
+    }
+    
+    // Display book information
+    public void displayInfo() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("ISBN: " + isbn);
+        System.out.println("Status: " + (isIssued ? "Issued" : "Available"));
+    }
+    
+    // Static method to get total books
+    public static int getTotalBooks() {
+        return totalBooks;
+    }
+}
+
+// Usage:
+LibraryBook book1 = new LibraryBook("Java Programming", "John Doe", "123-456");
+LibraryBook book2 = new LibraryBook("Data Structures", "Jane Smith", "789-012");
+
+book1.issueBook();
+book1.displayInfo();
+
+System.out.println("Total books in library: " + LibraryBook.getTotalBooks());</pre>
+                </div>
+            </div>
+
+            <!-- Example 3: Time Class -->
+            <div class="card mb-8">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-[var(--text-main)] mb-4">Example 3: Time Class</h3>
+                    <p class="text-[var(--text-light)] mb-6">Demonstrates constructor overloading and method chaining.
+                    </p>
+
+                    <pre class="code-block">public class Time {
+    private int hours;
+    private int minutes;
+    private int seconds;
+    
+    // Default constructor
+    public Time() {
+        this(0, 0, 0);
+    }
+    
+    // Constructor with hours and minutes
+    public Time(int h, int m) {
+        this(h, m, 0);
+    }
+    
+    // Full constructor
+    public Time(int h, int m, int s) {
+        setTime(h, m, s);
+    }
+    
+    // Set time with validation
+    public void setTime(int h, int m, int s) {
+        hours = (h >= 0 && h < 24) ? h : 0;
+        minutes = (m >= 0 && m < 60) ? m : 0;
+        seconds = (s >= 0 && s < 60) ? s : 0;
+    }
+    
+    // Add seconds
+    public void addSeconds(int s) {
+        seconds += s;
+        minutes += seconds / 60;
+        seconds %= 60;
+        hours += minutes / 60;
+        minutes %= 60;
+        hours %= 24;
+    }
+    
+    // Display in 24-hour format
+    public String toString() {
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
+    }
+}
+
+// Usage:
+Time t1 = new Time();           // 00:00:00
+Time t2 = new Time(14, 30);     // 14:30:00
+Time t3 = new Time(9, 15, 45);  // 09:15:45
+
+t3.addSeconds(20);
+System.out.println(t3);  // 09:16:05</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Questions -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">📝 Practice Questions</h2>
+
+            <div class="card">
+                <div class="p-8">
+                    <div id="qa-container" class="space-y-4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[var(--text-main)] mb-8">📋 Quick Reference</h2>
+
+            <div class="card overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Concept</th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Description
+                            </th>
+                            <th class="px-6 py-4 text-left text-sm font-semibold text-[var(--text-main)]">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-[var(--border-color)]">
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Class</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">Blueprint for objects</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]"><code>class Car { }</code></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Object</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">Instance of a class</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]"><code>Car myCar = new Car();</code></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Constructor</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">Initializes objects</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]"><code>public Car() { }</code></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">this</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">Refers to current object</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]"><code>this.name = name;</code></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">static</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">Belongs to class, not object</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]"><code>static int count;</code></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-medium text-[var(--text-main)]">Encapsulation</td>
+                            <td class="px-6 py-4 text-[var(--text-light)]">Data hiding with private + getters/setters
+                            </td>
+                            <td class="px-6 py-4 text-[var(--text-light)]"><code>private int age;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 border-t border-[var(--border-color)] bg-white">
+        <p class="text-[var(--text-light)]">Built for ISC Class 11 Students.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
